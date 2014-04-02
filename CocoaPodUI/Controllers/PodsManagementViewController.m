@@ -267,7 +267,8 @@ typedef NS_ENUM(NSUInteger, ProjectFileType) {
         [alert setAlertStyle:NSCriticalAlertStyle];
         [alert setMessageText:@"Unable to proceed."];
         [alert setInformativeText:text];
-        [alert beginSheetModalForWindow:[[self view] window] completionHandler:nil];
+        [alert beginSheetModalForWindow:self.view.window modalDelegate:self didEndSelector:nil contextInfo:NULL];
+//        [alert beginSheetModalForWindow:[[self view] window] completionHandler:nil];
     }
 }
 
